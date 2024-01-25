@@ -1,6 +1,6 @@
-const Bill = require("../models/Bill");
-const Products = require("../models/Products");
-const Stores = require("../models/Stores");
+// const Bill = require("../models/Bill");
+// const Products = require("../models/Products");
+// const Stores = require("../models/Stores");
 
 // get product using pid id
 exports.getProductById = async (req, res) => {

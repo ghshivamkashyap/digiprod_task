@@ -1,5 +1,5 @@
-const Products = require("../models/Products");
-const Stores = require("../models/Stores");
+// const Products = require("../models/Products");
+// const Stores = require("../models/Stores");
 
 exports.addStore = async (req, res) => {
   try {

@@ -4,7 +4,7 @@ const db = require("./config/db");
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const productroutes = require("./routes/products");
+const dataroutes = require("./routes/data");
 
 dotenv.config();
 
@@ -27,7 +27,7 @@ app.use(
   })
 );
 
-app.use("/api", productroutes);
+app.use("/api", dataroutes);
 
 app.get("/", (req, res) => {
   return res.json({
