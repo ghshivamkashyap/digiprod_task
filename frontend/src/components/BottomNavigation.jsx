@@ -68,7 +68,6 @@
 
 // export default BottomNavigation;
 
-
 // src/components/BottomNavigation.js
 import React from "react";
 import { Link } from "react-router-dom";
@@ -89,32 +88,66 @@ const BottomNavigation = () => {
           </button>
         </li>
         <li>
-          <Link to="/" className="text-indigo-600 hover:text-indigo-700 focus:outline-none">
+          <Link
+            to="/"
+            className="text-indigo-600 hover:text-indigo-700 focus:outline-none"
+          >
             Carousal
           </Link>
         </li>
         <li>
-          <Link to="/pie-chart" className="text-indigo-600 hover:text-indigo-700 focus:outline-none">
+          <Link
+            to="/pie-chart"
+            className="text-indigo-600 hover:text-indigo-700 focus:outline-none"
+          >
             Pie Chart
           </Link>
         </li>
         <li>
-          <Link to="/line-chart" className="text-indigo-600 hover:text-indigo-700 focus:outline-none">
+          <Link
+            to="/line-chart"
+            className="text-indigo-600 hover:text-indigo-700 focus:outline-none"
+          >
             Line Chart
           </Link>
         </li>
         <li>
-          <Link to="/map" className="text-indigo-600 hover:text-indigo-700 focus:outline-none">
+          <Link
+            to="/map"
+            className="text-indigo-600 hover:text-indigo-700 focus:outline-none"
+          >
             Map
           </Link>
         </li>
         <li>
-          <Link to="/tabbed-layout" className="text-indigo-600 hover:text-indigo-700 focus:outline-none">
+          <Link
+            to="/tabbed-layout"
+            className="text-indigo-600 hover:text-indigo-700 focus:outline-none"
+          >
             Tabbed Layout
           </Link>
         </li>
         <li>
-          <Link to="/calendar-view" className="text-white bg-indigo-600 rounded-full px-4 py-2 focus:outline-none">
+          <Link
+            to="/button"
+            className="text-indigo-600 hover:text-indigo-700 focus:outline-none"
+          >
+            Button
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/table"
+            className="text-indigo-600 hover:text-indigo-700 focus:outline-none"
+          >
+            Table
+          </Link>
+        </li>{" "}
+        <li>
+          <Link
+            to="/calender"
+            className="text-indigo-600 hover:text-indigo-700 focus:outline-none"
+          >
             Calendar View
           </Link>
         </li>
