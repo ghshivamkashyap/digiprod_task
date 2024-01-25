@@ -2,7 +2,15 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        sm: "400px",
+        md: "500px",
+        lg: "700px",
+        xl: "900px",
+        "2xl": "1050px",
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };

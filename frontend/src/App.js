@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import BottomNavigation from "./components/BottomNavigation";
 import PieChart from "./pages/PieChart";
 import LineChart from "./pages/LineChart";
+import Map from "./pages/Map";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="pie-chart" element={<PieChart />} />
         <Route path="line-chart" element={<LineChart />} />
+        <Route path="map" element={<Map />} />
       </Routes>
       <BottomNavigation />
     </div>
