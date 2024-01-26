@@ -89,10 +89,6 @@ This web application is designed to display a line chart using React.js and Char
 
 - Bug reports, feature requests, and code contributions are welcome.
 
-## License
-
-- This project is licensed under [Your License].
-
 ## Acknowledgements
 
 - Special thanks to external libraries, resources, or individuals whose work has been used in this project.
