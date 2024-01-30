@@ -57,7 +57,6 @@
 
 // // export default LineChart;
 
-
 // import React, { useEffect, useState } from "react";
 // import { Line } from "react-chartjs-2";
 
@@ -127,9 +126,9 @@
 
 // export default LineChart;
 
-
 import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
+import Loading from "./Loading";
 
 const LineChart = () => {
   const [chartData, setChartData] = useState({});
@@ -138,7 +137,9 @@ const LineChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://digiprod.onrender.com/api/getlinechartdata");
+        const response = await fetch(
+          "https://digiprod.onrender.com/api/getlinechartdata"
+        );
 
         if (response.ok) {
           const data = await response.json();
@@ -177,7 +178,7 @@ const LineChart = () => {
         },
       },
     },
-    maintainAspectRatio: false, 
+    maintainAspectRatio: false,
     responsive: true,
   };
 
@@ -188,7 +189,9 @@ const LineChart = () => {
       </div>
       <div className="w-full h-[500px] bg-zinc-200 rounded-lg">
         {loading ? (
-          <p>Loading chart data...</p>
+          <div>
+            <Loading />
+          </div>
         ) : (
           <Line data={chartData} options={options} />
         )}
