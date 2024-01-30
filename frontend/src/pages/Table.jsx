@@ -168,7 +168,6 @@ const Table = () => {
   };
 
   const filteredData = [
-    // Your data array (use state or fetch from API)
     {
       productName: "Apple MacBook Pro 17",
       color: "Silver",

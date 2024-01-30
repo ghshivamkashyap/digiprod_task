@@ -15,7 +15,7 @@ const Calander = () => {
                   tabindex="0"
                   class="focus:outline-none  text-base font-bold dark:text-gray-100 text-gray-800"
                 >
-                  October 2020
+                  Jan 2024
                 </span>
                 <div class="flex items-center">
                   <button
