@@ -350,6 +350,13 @@ const Calander = () => {
                           </p>
                         </div>
                       </td>
+                      <td>
+                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                          <p class="text-base text-gray-500 dark:text-gray-100 font-medium">
+                            31
+                          </p>
+                        </div>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
