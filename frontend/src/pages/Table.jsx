@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Table = () => {
   const [filters, setFilters] = useState({
@@ -8,6 +8,9 @@ const Table = () => {
     price: "",
   });
 
+  const [filteredData, setFilteredData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
   const handleFilterChange = (filterName, value) => {
     setFilters((prevFilters) => ({
       ...prevFilters,
@@ -15,39 +18,58 @@ const Table = () => {
     }));
   };
 
-  const filteredData = [
-    {
-      productName: "Apple MacBook Pro 17",
-      color: "Silver",
-      category: "Laptop",
-      price: "$2999",
-    },
-    {
-      productName: "Microsoft Surface Pro",
-      color: "White",
-      category: "Laptop PC",
-      price: "$1999",
-    },
-    {
-      productName: "Magic Mouse 2",
-      color: "Black",
-      category: "Accessories",
-      price: "$99",
-    },
-    {
-      productName: "Google Pixel Phone",
-      color: "Gray",
-      category: "Phone",
-      price: "$799",
-    },
-    {
-      productName: "Apple Watch 5",
-      color: "Red",
-      category: "Wearables",
-      price: "$999",
-    },
-  ].filter((item) => {
-    // Filter based on criteria
+  // useEffect(() => {
+  //   (async () => {
+  //     setLoading(true);
+  //     try {
+  //       const res = await fetch(
+  //         "https://digiprod.onrender.com/api/gettabledata"
+  //       );
+
+  //       const data = await res.json();
+  //       console.log("Table data is - ", data?.data);
+  //       setFilteredData(data?.data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   })();
+  // }, []);
+
+  // ...
+
+  useEffect(() => {
+    (async () => {
+      setLoading(true);
+      try {
+        const res = await fetch(
+          "https://digiprod.onrender.com/api/gettabledata"
+        );
+        const data = await res.json();
+        console.log("Table data is - ", data?.data);
+
+        const filteredResult = data?.data.filter((item) => {
+          return (
+            item.productName
+              .toLowerCase()
+              .includes(filters.productName.toLowerCase()) &&
+            item.color.toLowerCase().includes(filters.color.toLowerCase()) &&
+            item.category
+              .toLowerCase()
+              .includes(filters.category.toLowerCase()) &&
+            item.price.toLowerCase().includes(filters.price.toLowerCase())
+          );
+        });
+
+        setFilteredData(filteredResult);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, [filters]);
+
+  filteredData.filter((item) => {
     return (
       item.productName
         .toLowerCase()
