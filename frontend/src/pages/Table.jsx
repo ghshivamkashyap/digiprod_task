@@ -18,25 +18,7 @@ const Table = () => {
     }));
   };
 
-  // useEffect(() => {
-  //   (async () => {
-  //     setLoading(true);
-  //     try {
-  //       const res = await fetch(
-  //         "https://digiprod.onrender.com/api/gettabledata"
-  //       );
-
-  //       const data = await res.json();
-  //       console.log("Table data is - ", data?.data);
-  //       setFilteredData(data?.data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   })();
-  // }, []);
-
-  // ...
-
+ 
   useEffect(() => {
     (async () => {
       setLoading(true);

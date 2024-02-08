@@ -8,6 +8,7 @@ const {
   getLineChartData,
 } = require("../controllers/GetLineChartData");
 const { UploadTableData, GetTableData } = require("../controllers/Table");
+const { UploadUserData, UploadLeadData, getUserData, getAllUserData } = require("../controllers/Leads");
 const router = express.Router();
 
 router.post("/uploadimages", Uploadimages);
@@ -19,5 +20,11 @@ router.get("/getlinechartdata", getLineChartData);
 router.post("/uploadtabledata", UploadTableData);
 router.get("/gettabledata", GetTableData);
 
+
+// digi work 
+router.post("/uploaduserdata", UploadUserData);
+router.post("/uploadleaddata", UploadLeadData);
+router.get("/getuserdata/:userId", getUserData);
+router.get("/getalluserdata", getAllUserData);
 
 module.exports = router;
